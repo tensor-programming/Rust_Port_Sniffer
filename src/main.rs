@@ -45,6 +45,7 @@ fn end_port_guard(input: &u16) -> bool {
     *input <= MAX
 }
 
+
 // Scan the port.
 async fn scan(tx: Sender<u16>, start_port: u16, addr: IpAddr) {
     // Attempts Connects to the address and the given port.
