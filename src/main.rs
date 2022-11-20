@@ -20,16 +20,16 @@ pub struct Arguments {
     /// The address that you want to sniff.  Must be a valid ipv4 address.  Falls back to 127.0.0.1
     pub address: IpAddr,
     #[bpaf(
-        long("end"),
-        short('e'),
+        long("start"),
+        short('s'),
         guard(start_port_guard, "Must be greater than 0"),
         fallback(1u16)
     )]
     /// The start port for the sniffer. (must be greater than 0)
     pub start_port: u16,
     #[bpaf(
-        long("start"),
-        short('s'),
+        long("end"),
+        short('e'),
         guard(end_port_guard, "Must be less than or equal to 65535"),
         fallback(MAX)
     )]
