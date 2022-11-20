@@ -1,6 +1,9 @@
 [package]
 name = "ip_sniffer"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["tensor-programming <abeltensor@tensor-programming.com>"]
+edition = "2021"
 
 [dependencies]
+tokio = { version = "1", features = ["full"] }
+bpaf = {version = "0.7", features = ["derive", "bright-color"]}
